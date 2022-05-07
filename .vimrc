@@ -3,10 +3,10 @@ call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'posva/vim-vue'
 Plug 'morhetz/gruvbox'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
@@ -17,6 +17,16 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 :let mapleader = ","
+
+" posva/vim-vue slow down
+let g:vue_pre_processors = ['pug', 'scss']
+
+" show existing tab with 2 spaces width
+set tabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+" On pressing tab, insert 2 spaces
+set expandtab
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
@@ -32,7 +42,7 @@ set hlsearch
 
 " colorscheme
 set bg=dark
-colorscheme gruvbox
+colorscheme onedark
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
@@ -70,3 +80,4 @@ map <C-Down> :m .+1<CR>
 
 set nofoldenable
 set relativenumber
+set nu rnu
