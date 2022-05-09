@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'posva/vim-vue'
 Plug 'morhetz/gruvbox'
-"Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
@@ -13,6 +13,7 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/0.x'
   \ }
 Plug 'itchyny/lightline.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -20,6 +21,10 @@ call plug#end()
 
 " posva/vim-vue slow down
 let g:vue_pre_processors = ['pug', 'scss']
+
+" Yggdroot/indentLine
+let g:indentLine_color_term = 239
+
 
 " show existing tab with 2 spaces width
 set tabstop=2
@@ -41,8 +46,8 @@ set incsearch
 set hlsearch
 
 " colorscheme
-set bg=dark
-colorscheme onedark
+colorscheme gruvbox
+set background=dark
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
