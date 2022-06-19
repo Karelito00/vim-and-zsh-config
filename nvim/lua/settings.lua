@@ -6,6 +6,7 @@ vim.cmd [[ let mapleader = "," ]]
 
 -- nerdtree
 vim.cmd [[ let g:NERDTreeWinPos = "right" ]]
+vim.cmd [[ let g:NERDTreeLimitedSyntax = 1 ]]
 
 -- colorscheme
 vim.cmd [[ 
@@ -30,3 +31,6 @@ require('nvim-autopairs').setup{}
 
 -- fzf
 vim.g.fzf_layout = { window = { width = 0.8, height = 0.8 } }
+
+-- vim-devicons
+vim.cmd [[ set encoding=UTF-8 ]]
