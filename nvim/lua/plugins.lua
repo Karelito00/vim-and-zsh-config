@@ -11,8 +11,11 @@ vim.cmd [[ Plug 'prettier/vim-prettier', {
 	\ 'do': 'yarn install --frozen-lockfile --production',
 	\ 'branch': 'release/0.x'
 	\ } ]]
+vim.cmd [[ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } ]]
+vim.cmd [[ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} ]]
+Plug 'posva/vim-vue'
 Plug 'junegunn/fzf'
-Plug 'dense-analysis/ale'
+--Plug 'dense-analysis/ale'
 Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
